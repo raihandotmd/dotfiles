@@ -1,0 +1,8 @@
+configuration {
+    modi: "drun,window";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "Applications: ";
+    display-window: "Windows: ";
+}
+@theme "/usr/share/rofi/themes/dmenu.rasi"
