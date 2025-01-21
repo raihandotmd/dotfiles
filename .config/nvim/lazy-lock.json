@@ -14,12 +14,14 @@
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
   "nvim-autopairs": { "branch": "master", "commit": "3d02855468f94bf435db41b661b58ec4f48a06b7" },
   "nvim-cmp": { "branch": "main", "commit": "8c82d0bd31299dbff7f8e780f5e06d2283de9678" },
-  "nvim-lspconfig": { "branch": "master", "commit": "9ee2e7dac2e1c74538a0e0d79b9e2d59a8517bd6" },
+  "nvim-lspconfig": { "branch": "master", "commit": "46de45200afab642a134cf4e26f8f495ab7a49dd" },
   "nvim-treesitter": { "branch": "master", "commit": "0fb02ac5c39423b5c863eb7c8dd7b093879f1488" },
   "plenary": { "branch": "master", "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66" },
   "plenary.nvim": { "branch": "master", "commit": "3707cdb1e43f5cea73afb6037e6494e7ce847a66" },
   "telescope.nvim": { "branch": "master", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "trouble.nvim": { "branch": "main", "commit": "50481f414bd3c1a40122c1d759d7e424d5fafe84" },
   "vim-fugitive": { "branch": "master", "commit": "d74a7cff4cfcf84f83cc7eccfa365488f3bbabc2" },
   "vim-tmux-navigator": { "branch": "master", "commit": "d847ea942a5bb4d4fab6efebc9f30d787fd96e65" },
+  "which-key.nvim": { "branch": "main", "commit": "1f8d414f61e0b05958c342df9b6a4c89ce268766" },
   "zenburn.nvim": { "branch": "master", "commit": "f5ee12b30119499c7fa7f95719cd7c5aab9f9f29" }
 }
