@@ -1,4 +1,5 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+
 # Initialization code that may require console input (password prompts, [y/n]
 
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -43,6 +44,12 @@ zinit cdreplay -q
 bindkey -e # emacs mode
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
+# Bind Ctrl + Shift + F to forward-word
+bindkey '^[[102;6u' forward-word
+# Bind Ctrl + Shift + B to backward-word
+bindkey '^[[98;6u' backward-word
+
+
 
 # history
 HISTSIZE=5000
@@ -59,7 +66,8 @@ setopt hist_find_no_dups
 
 # completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' list-colors "${(s.:.)ls_colors}"
+
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
@@ -76,3 +84,11 @@ alias gp='~/.config/ghostty/ghostty-git_repo.sh'
 source /usr/share/doc/fzf/examples/key-bindings.zsh
 source /usr/share/doc/fzf/examples/completion.zsh
 eval "$(zoxide init --cmd cd zsh)"
+
+
+# homebrew setup
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# laravel setup
+export PATH="/home/projectraihan/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/projectraihan/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
