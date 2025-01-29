@@ -18,7 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         { import = "plugins" },
-        install = { colorscheme = { "zenburn" } },
+        install = { colorscheme = { "zephyr" } },
         {
             'nvim-telescope/telescope.nvim',
             tag = '0.1.8',
