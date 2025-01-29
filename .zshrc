@@ -44,10 +44,8 @@ zinit cdreplay -q
 bindkey -e # emacs mode
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
-# Bind Ctrl + Shift + F to forward-word
-bindkey '^[[102;6u' forward-word
-# Bind Ctrl + Shift + B to backward-word
-bindkey '^[[98;6u' backward-word
+bindkey '^]' forward-word
+bindkey '^[' backward-word
 
 
 
@@ -89,6 +87,5 @@ eval "$(zoxide init --cmd cd zsh)"
 # homebrew setup
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
-# laravel setup
-export PATH="/home/projectraihan/.config/herd-lite/bin:$PATH"
-export PHP_INI_SCAN_DIR="/home/projectraihan/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+# setup env path
+source ~/.zenv_path
