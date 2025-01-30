@@ -34,6 +34,11 @@ return {
                 return result ~= '' and '*' or ''
             end
 
+            -- Function to check for unsaved changes (modified buffer)
+            local function get_modified_indicator()
+                return vim.bo.modified and '*' or '' -- Return '*' if the buffer is modified
+            end
+
             -- Update git root cache on entering a buffer
             vim.api.nvim_create_autocmd("BufEnter", {
                 callback = function()
@@ -41,7 +46,6 @@ return {
                 end,
             })
 
-            -- Configure lualine sections
             return {
                 options = {
                     theme = 'iceberg_dark',
@@ -49,12 +53,12 @@ return {
                     section_separators = '',
                 },
                 sections = {
-                    lualine_a = { get_relative_path },
-                    lualine_b = { get_git_status },
-                    lualine_c = {},
-                    lualine_x = {},
+                    lualine_a = { get_relative_path, get_modified_indicator },
+                    lualine_b = { { 'branch', icons_enabled = false }, get_git_status },
+                    lualine_c = { 'diagnostics' },
+                    lualine_x = { 'location' },
                     lualine_y = {},
-                    lualine_z = { '%p%%' }, -- Show percentage of file scrolled
+                    lualine_z = { 'progress' }, -- Show percentage of file scrolled
                 },
             }
         end,
