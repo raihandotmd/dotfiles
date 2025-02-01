@@ -46,6 +46,7 @@ bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^]' forward-word
 bindkey '^[' backward-word
+bindkey '^h' backward-kill-word
 
 
 
@@ -77,6 +78,7 @@ alias vim='nvim'
 # personal aliases
 alias hub='cd ~/hub'
 alias gp='~/.config/ghostty/ghostty-git_repo.sh'
+alias ..='cd ..'
 
 # shell integrations
 source /usr/share/doc/fzf/examples/key-bindings.zsh
@@ -89,3 +91,12 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # setup env path
 source ~/.zenv_path
+
+# flutter setup
+function flutter-watch(){
+  tmux send-keys "flutter run $1 $2 $3 $4 --pid-file=/tmp/tf1.pid" Enter \;\
+  split-window -v \;\
+  send-keys 'npx -y nodemon -e dart -x "cat /tmp/tf1.pid | xargs kill -s USR1"' Enter \;\
+  resize-pane -y 5 -t 1 \;\
+  select-pane -t 0 \;
+}

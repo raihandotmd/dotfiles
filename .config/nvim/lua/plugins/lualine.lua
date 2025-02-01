@@ -48,7 +48,7 @@ return {
 
             return {
                 options = {
-                    theme = 'iceberg_dark',
+                    theme = 'gruvbox',
                     component_separators = '',
                     section_separators = '',
                 },
