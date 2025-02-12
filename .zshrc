@@ -79,6 +79,7 @@ alias vim='nvim'
 alias hub='cd ~/hub'
 alias gp='~/.config/ghostty/ghostty-git_repo.sh'
 alias ..='cd ..'
+alias cl='clear'
 
 # shell integrations
 source /usr/share/doc/fzf/examples/key-bindings.zsh
