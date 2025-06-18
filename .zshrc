@@ -77,9 +77,9 @@ alias vim='nvim'
 
 # personal aliases
 alias hub='cd ~/hub'
-alias gp='~/.config/ghostty/ghostty-git_repo.sh'
 alias ..='cd ..'
 alias cl='clear'
+alias rv='cd ~/hub/raihan-vault'
 
 # shell integrations
 source /usr/share/doc/fzf/examples/key-bindings.zsh
@@ -101,3 +101,37 @@ function flutter-watch(){
   resize-pane -y 5 -t 1 \;\
   select-pane -t 0 \;
 }
+
+#flutterflow
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+# Go setup
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
+
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/projectraihan/.dart-cli-completion/zsh-config.zsh ]] && . /home/projectraihan/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+export PATH="$HOME/.local/bin:$PATH"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/projectraihan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/projectraihan/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/projectraihan/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/projectraihan/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/projectraihan/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
