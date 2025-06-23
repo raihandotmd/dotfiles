@@ -29,6 +29,23 @@ return {
 
         require("fidget").setup({})
         require("mason").setup()
+        require("mason-lspconfig").setup({
+            ensure_installed = { "gopls", "lua_ls" },
+        })
+
+        local lspconfig = require("lspconfig")
+        lspconfig.gopls.setup({
+            capabilities = capabilities,
+            settings = {
+                gopls = {
+                    analyses = {
+                        unusedparams = true,
+                        shadow = true,
+                    },
+                    staticcheck = true,
+                },
+            },
+        })
 
         local cmp_select = { behavior = cmp.SelectBehavior.Select }
 

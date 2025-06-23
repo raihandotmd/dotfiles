@@ -39,9 +39,12 @@ M.general_keymaps = function()
     vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz", { desc = "Previous item in location list" })
 
     -- Search and file permissions
-    vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    vim.keymap.set("n", "<leader>sr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
         { desc = "Search and replace current word" })
     vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Make file executable" })
+
+    -- Copilot Chat
+    vim.keymap.set("n", "<leader>cco", vim.cmd.CopilotChatOpen, { desc = "Copilot Chat Open" })
 end
 
 -- Plugin-specific keymaps
