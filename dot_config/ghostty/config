@@ -1,0 +1,23 @@
+# Ghostty Configuration
+
+# Shell Integration
+shell-integration = zsh
+shell-integration-features = no-cursor
+window-theme = dark
+theme = Adwaita Dark
+title = ""
+background = #1e1e1e
+font-size = 20
+mouse-hide-while-typing = true
+window-decoration = false
+window-save-state = always
+
+cursor-style = block
+
+# Keybindings Configuration
+
+# Miscellaneous Keybindings
+keybind = ctrl+g>r=reload_config
+keybind = ctrl+g>t=toggle_window_decorations
+keybind = ctrl+g>shift+t=toggle_tab_overview
+keybind = ctrl+g>`=open_config
