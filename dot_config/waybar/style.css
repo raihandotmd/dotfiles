@@ -128,10 +128,9 @@
 }
 
 /* --- Right Modules (Single, Seamless Bar ) --- */
-#bluetooth,
+#tray,
 #pulseaudio,
 #backlight,
-#network,
 #custom-lock,
 #battery {
   background-color: #1a1b26;
@@ -144,19 +143,11 @@
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-#bluetooth:hover,
 #pulseaudio:hover,
 #backlight:hover,
-#network:hover,
 #custom-lock:hover,
 #battery:hover {
   background-color: rgb(41, 42, 53);
-}
-
-#bluetooth {
-  margin-left: 0px; 
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
 }
 
 #battery {
@@ -184,27 +175,10 @@
   color: #c6d0f5;
 }
 
-#network {
-  color: #c6d0f5;
-}
-
-#network.disconnected {
-  color: #e78284;
-}
-
 #custom-lock {
   color: #babbf1;
 }
-#bluetooth {
-  color: #888888;
-  font-size: 16px;
-}
-#bluetooth.on {
-  color: #2196f3;
-}
-#bluetooth.connected {
-  color: #99d1db;
-}
+
 #battery {
   color: #99d1db;;
 }
@@ -214,6 +188,11 @@
 #battery.warning:not(.charging) {
   color: #e78284;
 }
+
+#tray {
+  border-radius: 6px 0 0 6px;
+}
+
 
 /* --- Tooltip Styles --- */
 tooltip {

@@ -12,8 +12,7 @@
   "modules-center": ["clock"],
 
   "modules-right": [
-    "bluetooth",
-    "network",
+    "tray",
     "pulseaudio", 
   ],
 
@@ -25,21 +24,6 @@
     }
   },
 
-  "bluetooth": {
-    "format": "󰂲",
-    "format-on": "{icon}",
-    "format-off": "{icon}", 
-    "format-connected":"{icon}",
-    "format-icons":{
-        "on":"󰂯",
-        "off": "󰂲",
-        "connected": "󰂱",
-        },
-    "on-click": "blueman-manager",
-    "tooltip-format-connected":"{device_enumerate}"
-  },
-
-
   "clock": {
     "timezone": "Asia/Jakarta",
     "tooltip": false,
@@ -47,16 +31,12 @@
     "interval": 1
   },
 
-
-  "network": {
-    "format-wifi": "󰤢",
-    "format-ethernet": "󰈀 ",
-    "format-disconnected": "󰤠 ",
-    "interval": 5,
-    "tooltip-format": "{essid} ({signalStrength}%)",
-    "on-click": "nm-connection-editor"
-
- },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+    "show-passive-items": true,
+    "on-update": "echo 'Tray updated!'" 
+  },
 
   "cpu": {
     "interval": 1,
