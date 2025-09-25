@@ -74,6 +74,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # aliases
 alias ls='ls --color'
 alias vim='nvim'
+alias vi='nvim'
 
 # personal aliases
 alias hub='cd ~/hub'

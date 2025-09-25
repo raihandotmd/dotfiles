@@ -1,0 +1,22 @@
+[global]
+highlight = "#85d623"
+frame_color = "#85d623"
+frame_width = 1
+separator_color= frame
+corner_radius = 4
+origin = bottom-right
+sort = update
+timeout = 5
+
+[urgency_low]
+background = "#2e2e2e"
+foreground = "#EEEEEE"
+
+[urgency_normal]
+background = "#2e2e2e"
+foreground = "#EEEEEE"
+
+[urgency_critical]
+background = "#2e2e2e"
+foreground = "#EEEEEE"
+frame_color = "#fab387"
