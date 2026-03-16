@@ -9,7 +9,7 @@ title = ""
 background = #1e1e1e
 font-size = 20
 mouse-hide-while-typing = true
-window-decoration = false
+window-decoration = true
 window-save-state = always
 
 cursor-style = block
