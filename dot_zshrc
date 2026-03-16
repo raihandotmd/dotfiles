@@ -91,3 +91,17 @@ export PATH="$PATH:$GOPATH/bin"
 source <(fzf --zsh)
 export PATH="/home/projectraihan/.config/herd-lite/bin:$PATH"
 export PHP_INI_SCAN_DIR="/home/projectraihan/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+export PATH="/Users/project.raihan/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/Users/project.raihan/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
+
+# Added by Antigravity
+export PATH="/Users/project.raihan/.antigravity/antigravity/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/project.raihan/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+export PATH="$HOME/.local/bin:$PATH"
+
+# Added by Antigravity
+export PATH="/Users/project.raihan/.antigravity/antigravity/bin:$PATH"
