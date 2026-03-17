@@ -10,6 +10,9 @@ M.general_keymaps = function()
     vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Open file explorer" })
     vim.keymap.set("n", "<leader>gs", vim.cmd.Git, { desc = "Open Git status" })
 
+    -- Window navigation
+    vim.keymap.set("t", "kj", [[<C-\><C-n>]])
+
     -- Visual mode movements
     vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
     vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
@@ -54,14 +57,14 @@ M.plugin_keymaps = {
         vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
         vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
-        vim.keymap.set("n", "<C-h>", function() harpoon:list():select(1) end)
-        vim.keymap.set("n", "<C-j>", function() harpoon:list():select(2) end)
-        vim.keymap.set("n", "<C-k>", function() harpoon:list():select(3) end)
-        vim.keymap.set("n", "<C-l>", function() harpoon:list():select(4) end)
-        vim.keymap.set("n", "<leader><C-h>", function() harpoon:list():replace_at(1) end)
-        vim.keymap.set("n", "<leader><C-j>", function() harpoon:list():replace_at(2) end)
-        vim.keymap.set("n", "<leader><C-k>", function() harpoon:list():replace_at(3) end)
-        vim.keymap.set("n", "<leader><C-l>", function() harpoon:list():replace_at(4) end)
+        vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
+        vim.keymap.set("n", "<leader>2", function() harpoon:list():select(2) end)
+        vim.keymap.set("n", "<leader>3", function() harpoon:list():select(3) end)
+        vim.keymap.set("n", "<leader>4", function() harpoon:list():select(4) end)
+        vim.keymap.set("n", "<leader><C-1>", function() harpoon:list():replace_at(1) end)
+        vim.keymap.set("n", "<leader><C-2>", function() harpoon:list():replace_at(2) end)
+        vim.keymap.set("n", "<leader><C-3>", function() harpoon:list():replace_at(3) end)
+        vim.keymap.set("n", "<leader><C-4>", function() harpoon:list():replace_at(4) end)
     end,
     telescope = function(builtin)
         vim.keymap.set('n', '<leader>pf', builtin.find_files, { desc = "Find files" })
